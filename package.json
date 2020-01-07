@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "mongoose": "^5.8.1",
+    "mongodb": "^3.4.1",
+    "mongoose": "^5.8.5",
     "node-telegram-bot": "^0.1.9",
     "node-telegram-bot-api": "^0.40.0"
   },
@@ -14,6 +15,7 @@
     "@types/node-telegram-bot-api": "^0.40.1"
   },
   "scripts": {
+    "start": "node js_files/mew.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
