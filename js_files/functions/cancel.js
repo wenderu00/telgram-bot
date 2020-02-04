@@ -18,8 +18,8 @@ exports.cancel = (msg, bot, model) => __awaiter(void 0, void 0, void 0, function
     var len;
     var i;
     var continua;
-    if (!evento) {
-        bot.sendMessage(chat_id, 'esse evento não existe');
+    if (Boolean(evento)) {
+        bot.sendMessage(chat_id, 'você não está inscrito nesse evento');
     }
     else {
         len = evento.participantes.length;

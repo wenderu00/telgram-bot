@@ -34,8 +34,8 @@ export const cancel= async(
     var len: number
     var i: number
     var continua: boolean
-    if(!evento){
-        bot.sendMessage(chat_id,'esse evento não existe')
+    if(Boolean(evento)){
+        bot.sendMessage(chat_id,'você não está inscrito nesse evento')
     }
     else{
         len=evento.participantes.length

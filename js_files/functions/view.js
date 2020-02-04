@@ -10,12 +10,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.view = (msg, bot, model) => __awaiter(void 0, void 0, void 0, function* () {
-    const eventos = yield model.find();
     bot.sendMessage(msg.from.id, 'os eventos são:');
+    const eventos = yield model.find();
     var x;
+    var y;
     for (x in eventos) {
         var evento_atual = eventos[x];
         bot.sendMessage(msg.from.id, 'Nome: ' + evento_atual.titulo + '\nDesc:' + evento_atual.desc);
+        //setTimeout(bot.sendMessage(msg.from.id,'Nome: '+evento_atual.titulo+'\nDesc:'+evento_atual.desc),1000)
     }
 });
 //# sourceMappingURL=view.js.map

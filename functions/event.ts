@@ -37,7 +37,11 @@ export const evento=async(
         const evento= new model({
             titulo: titulo,
             desc: desc,
-            participantes: [],
+            participantes: [{
+                nome: msg.from.first_name+' '+msg.from.last_name,
+                id: chat_id,
+                date:Date(msg.date)
+            }],
             criador: chat_id
         })
         

@@ -21,7 +21,9 @@ export const help=(
         +'/cancelar nomeEvento\n'
         +'Cancela a inscrição em um evento que você já está inscrito.\n'
         +'/minhas_inscricoes\n'
-        +'lista todos os eventos que você está inscrito.'
+        +'lista todos os eventos que você está inscrito.\n'
+        +'/conselho\n'
+        +'caso tenha algum comentário ou crítica para nos enriquecer.'
         )
     bot.sendMessage(msg.from.id,manual)
 }

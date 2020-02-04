@@ -12,7 +12,8 @@ export const my_events= async(
 
     const eventos= await model.find({criador: chat_id})
     var x: string | number
-    if(!eventos){
+    //console.log(eventos.length)
+    if(eventos.length==0){
         bot.sendMessage(chat_id,'Não existe nenhum evento criado por você. Crie um!')
     }
     else{

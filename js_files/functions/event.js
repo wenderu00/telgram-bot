@@ -30,7 +30,11 @@ exports.evento = (msg, bot, model) => __awaiter(void 0, void 0, void 0, function
         const evento = new model({
             titulo: titulo,
             desc: desc,
-            participantes: [],
+            participantes: [{
+                    nome: msg.from.first_name + ' ' + msg.from.last_name,
+                    id: chat_id,
+                    date: Date(msg.date)
+                }],
             criador: chat_id
         });
         evento.save().then(() => console.log('evento'));

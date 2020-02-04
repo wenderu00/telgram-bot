@@ -13,7 +13,8 @@ exports.my_events = (msg, bot, model) => __awaiter(void 0, void 0, void 0, funct
     const chat_id = msg.from.id;
     const eventos = yield model.find({ criador: chat_id });
     var x;
-    if (!eventos) {
+    //console.log(eventos.length)
+    if (eventos.length == 0) {
         bot.sendMessage(chat_id, 'Não existe nenhum evento criado por você. Crie um!');
     }
     else {

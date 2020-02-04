@@ -8,13 +8,14 @@ export const view= async (
     model: { 
         find: () => any 
     }) =>{
-
-    const eventos= await model.find()
     bot.sendMessage(msg.from.id,'os eventos são:')
-
+    const eventos= await model.find()
     var x: string | number
+    var y: any
     for(x in eventos){
         var evento_atual=eventos[x]
         bot.sendMessage(msg.from.id,'Nome: '+evento_atual.titulo+'\nDesc:'+evento_atual.desc)
+        //setTimeout(bot.sendMessage(msg.from.id,'Nome: '+evento_atual.titulo+'\nDesc:'+evento_atual.desc),1000)
+
     }
 }

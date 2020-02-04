@@ -7,7 +7,8 @@
     "mongodb": "^3.4.1",
     "mongoose": "^5.8.5",
     "node-telegram-bot": "^0.1.9",
-    "node-telegram-bot-api": "^0.40.0"
+    "node-telegram-bot-api": "^0.40.0",
+    "typescript": "^3.7.5"
   },
   "devDependencies": {
     "@types/mongoose": "^5.5.35",
@@ -15,7 +16,7 @@
     "@types/node-telegram-bot-api": "^0.40.1"
   },
   "scripts": {
-    "start": "node js_files/mew.js",
+    "start": "node js_files/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
